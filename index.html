@@ -59,119 +59,224 @@ a:visited,
     </style>
     <div id="hiddenDiv" style="display:none;"></div>
     <div id="page" class="site">
-        <header id="masthead" class="site-header fixed" itemscope>
-            <div class="site-header-inner fixed">
-                <div class="humburger js-humburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="site-branding">
-                    <div class="site-logotype">
-                        <a href="#roulette" class="scrollto">
-                            <picture>
-                                <source srcset="images/logooz-1.jpg" type="image/png">
-                                <img alt="img" loading="lazy" src="images/logooz-1.jpg" data-key="0">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-                <div class="top-menu">
-                    <ul id="top-menu" class="menu">
-                        <li id="menu-item-1098" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1098">
-                            <a href="#roulette" class="scrollto">INICIO</a>
-                        </li>
-                        <li id="menu-item-1099" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1099">
-                            <a href="#roulette" class="scrollto">CONTACTOS</a>
-                        </li>
-                        <li id="menu-item-1100" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1100">
-                            <a href="#roulette" class="scrollto">SOBRE EL AUTOR</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="header-search">
-                    <span class="search-icon js-search-icon"></span>
-                </div>
+    
+    
+        <link href="https://fonts.cdnfonts.com/css/tiempos-headline" rel="stylesheet">
+        <style>
+            .webt-header {
+                width: 100%;
+                margin-bottom: 48px;
+            }
+            .webt-header__top {
+                height: 35px;
+            }
+            .webt-top__links {
+                max-width: 960px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                justify-content: center;
+            }
+            .webt-links__item {
+                font-family: TiemposHeadline!important;
+                position: relative;
+                font-size: 12px;
+                line-height: 12px;
+                font-weight: 400;
+                color: #666;
+                -webkit-transition: all .3s;
+                -moz-transition: all .3s;
+                -ms-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+                text-decoration: none;
+                padding: 5px 10px;
+            }
+            .webt-links__item:hover {
+                text-decoration: underline;
+                color: #666;
+            }
+            .webt-links__item:first-child {
+                font-size: 12px;
+                line-height: 12px;
+                font-weight: 700;
+                color: #001c4c;
+            }
+            .webt-links__item:before {
+                content: "";
+                background: #666;
+                width: 4px;
+                height: 4px;
+                position: absolute;
+                border-radius: 50%;
+                top: 8px;
+                left: -2px;
+            }
+            .webt-links__item:first-child:before {
+                display: none;
+            }
+            .webt-header__mid {
+                padding-left: 12px;
+                padding-right: 12px;
+                background: #001c4c;
+                height: 40px;
+                display: grid;
+                grid-template-columns: auto 167px auto;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .webt-mid__menu {
+                width: 22px;
+                height: 22px;
+                background-image: url(images/icon-menu.png);
+                background-repeat: no-repeat;
+                -webkit-background-size: contain;
+                background-size: contain;
+                background-position: center;
+                -webkit-transition: all .3s;
+                -moz-transition: all .3s;
+                -ms-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+            }
+            .webt-mid__logo {
+                height: 40px;
+                width: 167px;
+            }
+            .webt-mid__login {
+                width: 22px;
+                height: 22px;
+                background-image: url(images/icon-login.png);
+                background-repeat: no-repeat;
+                -webkit-background-size: contain;
+                background-size: contain;
+                background-position: center;
+                -webkit-transition: all .3s;
+                -moz-transition: all .3s;
+                -ms-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+            }
+            .webt-header__bottom {
+                overflow: hidden;
+                background: #eaede2;
+                border-top: 1px solid #fff;
+                height: 47px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .webt-bottom__logo {
+                height: 28px;
+            }
+            .webt-header__nav {
+                max-width: 1080px;
+                width: 100%;
+                margin: 0 auto;
+                display: flex;
+                flex-wrap: nowrap;
+                height: 39px;
+            }
+            .webt-nav__item {
+                font-family: TiemposHeadline!important;
+                font-weight: 700;
+                font-size: 13px;
+                line-height: 13px;
+                color: #222;
+                text-transform: uppercase;
+                padding: 13px 10px;
+                display: block;
+                position: relative;
+                -webkit-transition: all .3s;
+                -moz-transition: all .3s;
+                -ms-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+                text-decoration: none;
+            }
+            .webt-nav__item:before {
+                content: "/";
+                position: absolute;
+                left: -2px;
+            }
+            .webt-nav__item:first-child:before,
+            .webt-nav__item:last-child:before {
+                display: none;
+            }
+            .webt-nav__item:hover {
+                color: #222;
+                text-decoration: none;
+            }
+            .--item-button {
+                background: gold;
+            }
+        
+            @media (max-width: 1080px) {
+                .webt-header__nav {
+                    max-width: 100%;
+                    white-space: nowrap;
+                    overflow-x: scroll;
+                    justify-content: flex-start;
+                }
+            }
+        
+            @media (max-width: 960px) {
+                .webt-top__links {
+                    max-width: 100%;
+                    white-space: nowrap;
+                    overflow-x: scroll;
+                    justify-content: flex-start;
+                }
+            }
+        
+            @media (max-width: 768px) {
+            
+            }
+        
+            @media (max-width: 575px) {
+            
+            }
+        </style>
+        <header class="webt-header">
+            <div class="webt-header__top">
+                <nav class="webt-top__links">
+                    <a href="#roulette" class="webt-links__item">Hoy interesa</a>
+                    <a href="#roulette" class="webt-links__item">Hermano David Bisbal</a>
+                    <a href="#roulette" class="webt-links__item">Papa Francisco </a>
+                    <a href="#roulette" class="webt-links__item">Donald Trump</a>
+                    <a href="#roulette" class="webt-links__item">Ana Obregón</a>
+                    <a href="#roulette" class="webt-links__item">Ana Sandra Lequio</a>
+                    <a href="#roulette" class="webt-links__item">Barcelona-Real Madrid</a>
+                    <a href="#roulette" class="webt-links__item">Javier Tebas</a>
+                    <a href="#roulette" class="webt-links__item">Más</a>
+                </nav>
             </div>
-        </header>
-        <nav id="site-navigation" class="main-navigation fixed">
-            <div class="main-navigation-inner full">
-                <div class="menu-shapka-container">
-                    <ul id="header_menu" class="menu">
-                        <li id="menu-item-1098" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1098 only-hamburger">
-                            <a href="#roulette" class="scrollto">INICIO</a>
-                        </li>
-                        <li id="menu-item-1099" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1099 only-hamburger">
-                            <a href="#roulette" class="scrollto">CONTACTOS</a>
-                        </li>
-                        <li id="menu-item-1100" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1100 only-hamburger">
-                            <a href="#roulette" class="scrollto">SOBRE EL AUTOR</a>
-                        </li>
-                        <li id="menu-item-981" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-981">
-                            <a href="#roulette" class="scrollto">Sitios web</a>
-                        </li>
-                        <li id="menu-item-982" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-982">
-                            <a href="#roulette" class="scrollto">Ganancias</a>
-                        </li>
-                        <li id="menu-item-983" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-983">
-                            <a href="#roulette" class="scrollto">Internet</a>
-                        </li>
-                        <li id="menu-item-989" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-989">
-                            <a href="#roulette" class="scrollto">Criptomoneda</a>
-                        </li>
-                        <li id="menu-item-984" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-984">
-                            <a href="#roulette" class="scrollto">Rankings</a>
-                        </li>
-                        <li id="menu-item-1016" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1016">
-                            <a href="#roulette" class="scrollto">Propio proyecto</a>
-                        </li>
-                        <li id="menu-item-986" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-986">
-                            <a href="#roulette" class="scrollto">Monederos</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="webt-header__mid">
+                <a href="#roulette" class="webt-mid__menu"></a>
+                <img src="images/logo.svg" alt="" class="webt-mid__logo">
+                <a href="#roulette" class="webt-mid__login"></a>
             </div>
-        </nav>
-        <div class="mobile-menu-placeholder js-mobile-menu-placeholder">
-            <nav id="site-navigation-mobile" class="main-navigation fixed">
-                <div class="main-navigation-inner full">
-                    <div class="menu-shapka-container">
-                        <ul id="header_menu" class="menu">
-                            <li id="menu-item-1098" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1098 only-hamburger">
-                                <a href="#roulette" class="scrollto">INICIO</a>
-                            </li>
-                            <li id="menu-item-1099" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1099 only-hamburger">
-                                <a href="#roulette" class="scrollto">CONTACTOS</a>
-                            </li>
-                            <li id="menu-item-1100" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1100 only-hamburger">
-                                <a href="#roulette" class="scrollto">SOBRE EL AUTOR</a>
-                            </li>
-                            <li id="menu-item-981" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-981">
-                                <a href="#roulette" class="scrollto">Sitios web</a>
-                            </li>
-                            <li id="menu-item-982" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-982">
-                                <a href="#roulette" class="scrollto">Ganancias</a>
-                            </li>
-                            <li id="menu-item-983" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-983">
-                                <a href="#roulette" class="scrollto">Internet</a>
-                            </li>
-                            <li id="menu-item-989" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-989">
-                                <a href="#roulette" class="scrollto">Criptomoneda</a>
-                            </li>
-                            <li id="menu-item-984" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-984">
-                                <a href="#roulette" class="scrollto">Rankings</a>
-                            </li>
-                            <li id="menu-item-1016" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1016">
-                                <a href="#roulette" class="scrollto">Propio proyecto</a>
-                            </li>
-                            <li id="menu-item-986" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-986">
-                                <a href="#roulette" class="scrollto">Monederos</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="webt-header__bottom">
+                <img src="images/bottom-logo.png" alt="" class="webt-bottom__logo">
+            </div>
+            <nav class="webt-header__nav">
+                <a href="#roulette" class="webt-nav__item">AL MINUTO</a>
+                <a href="#roulette" class="webt-nav__item">INTERNACIONAL</a>
+                <a href="#roulette" class="webt-nav__item">POLITICA</a>
+                <a href="#roulette" class="webt-nav__item">OPINIÓN</a>
+                <a href="#roulette" class="webt-nav__item">SOCIEDAD</a>
+                <a href="#roulette" class="webt-nav__item">DEPORTES</a>
+                <a href="#roulette" class="webt-nav__item">ECONOMÍA</a>
+                <a href="#roulette" class="webt-nav__item">LOCAL</a>
+                <a href="#roulette" class="webt-nav__item">GENTE</a>
+                <a href="#roulette" class="webt-nav__item">CULTURA</a>
+                <a href="#roulette" class="webt-nav__item">SUCESOS</a>
+                <a href="#roulette" class="webt-nav__item --item-button">SUSCRÍBETE</a>
             </nav>
-        </div>
+        </header>
+        
+        
         <div id="content" class="site-content fixed main-content-font">
             <div class="site-content-inner">
                 <div id="primary" class="content-area">
@@ -208,7 +313,7 @@ a:visited,
                                 <p>Otras personas también han tenido sentimientos similares, preguntándose sobre este tema no del todo agradable, pero tan importante. Créeme que, en cuanto termines de leer este artículo, tu ansiedad desaparecerá y sabrás todo lo que necesitas saber sobre el rechazo de los implantes dentales.</p>
                                 <p>En las siguientes líneas, te hablaremos de las causas del rechazo de los implantes dentales, sus síntomas, qué hacer en cada caso y algunos consejos útiles.</p>
                                 <p>
-                                    <b>Pero antes de nada, ¿realmente se produce el rechazo de los implantes dentales? Veámoslo.</b>
+                                    <b style="color: red;">Pero antes de nada, ¿realmente se produce el rechazo de los implantes dentales? Veámoslo.</b>
                                 </p>
                                 <h3>¿Existe realmente el rechazo de los implantes dentales?</h3>
                                 <p>Para ser más precisos, el rechazo de los implantes dentales no es una buena definición. En realidad, no existe ninguna reacción inmunitaria en el organismo que provoque el rechazo del implante, como puede ocurrir con un implante renal, por ejemplo.</p>
@@ -216,7 +321,7 @@ a:visited,
                                 <p>No obstante, a partir de ahora seguiremos refiriéndonos a tal concepto como "rechazo" de un implante dental, por ser el concepto más común (aunque, como hemos comprobado, no el más adecuado).</p>
                                 <p>Por otro lado, como comenta el Dr. Rafael Martínez Sáez, especialista en periodoncia e implantología:</p>
                                 <p>
-                                    <b>"La tasa de aceptación de los implantes hoy en día, basada en estadísticas reales, es del orden del 78%".</b>
+                                    <b style="color: red;">"La tasa de aceptación de los implantes hoy en día, basada en estadísticas reales, es del orden del 78%".</b>
                                 </p>
                                 <p>Esto indica que los implantes dentales son un procedimiento suficientemente seguro, en 2/3 de los casos no debería haber rechazo del implante dental.</p>
                                 <p>En el siguiente apartado sobre las causas del rechazo de los implantes dentales, te contaremos qué puede provocar este desagradable proceso.</p>
@@ -227,7 +332,7 @@ a:visited,
                                 <h3>Causas del rechazo de un implante dental: Doctor, ¿por qué se produce el proceso de rechazo de un implante dental?</h3>
                                 <p>Usted se estará preguntando: ¿por qué se produce el rechazo de un implante dental?</p>
                                 <p>
-                                    <b>Pues bien, existen dos tipos de complicaciones que pueden producirse tras una cirugía de implantes dentales y que pueden provocar el rechazo de un implante dental: la infección postoperatoria y la no integración del implante en el hueso.</b>
+                                    <b style="color: red;">Pues bien, existen dos tipos de complicaciones que pueden producirse tras una cirugía de implantes dentales y que pueden provocar el rechazo de un implante dental: la infección postoperatoria y la no integración del implante en el hueso.</b>
                                 </p>
                                 <p>Veamos cada una de ellas con más detalle.</p>
                                 <h3>La primera posibilidad de rechazo de un implante dental</h3>
@@ -238,7 +343,7 @@ a:visited,
                                     <img alt="img" loading="lazy" src="images/pics/Pic2.jpeg" style="margin: 0 auto 10px; display: block" data-key="3">
                                 </picture>
                                 <p>
-                                    <b>Estas medidas de asepsia y las instrucciones antibióticas preoperatorias y postoperatorias tienen como objetivo minimizar las posibilidades de infección.</b>
+                                    <b style="color: red;">Estas medidas de asepsia y las instrucciones antibióticas preoperatorias y postoperatorias tienen como objetivo minimizar las posibilidades de infección.</b>
                                 </p>
                                 <h3>La segunda posibilidad de rechazo de un implante dental</h3>
                                 <p>Otra causa de rechazo de los implantes dentales puede ser la falta de integración del implante en el hueso, también conocida como osteointegración.</p>
@@ -247,7 +352,7 @@ a:visited,
                                 <p>La segunda razón puede ocurrir después de colocar el implante. Cuando el paciente mastica en la "zona operada", transmite micromovimientos al implante que impiden que se integre en el hueso.</p>
                                 <p>Para comprenderlo mejor, utilizaremos el siguiente ejemplo: imagine una caída seguida de una fractura ósea. En este caso, habría que colocar una escayola, que bloquearía el movimiento del hueso hasta que volviera a cicatrizar.</p>
                                 <p>
-                                    <b>Por este motivo, explicamos al paciente inmediatamente después de la intervención que no debe realizar ningún movimiento mientras se fija el implante al hueso (de 6 a 12 semanas).</b>
+                                    <b style="color: red;">Por este motivo, explicamos al paciente inmediatamente después de la intervención que no debe realizar ningún movimiento mientras se fija el implante al hueso (de 6 a 12 semanas).</b>
                                 </p>
                                 <picture>
                                     <source srcset="images/pics/Pic3.jpeg" type="image/jpg">
@@ -256,19 +361,19 @@ a:visited,
                                 <h3>Síntomas de rechazo de los implantes dentales: Doctor, ¿cómo se manifiesta el rechazo de los implantes dentales?</h3>
                                 <p>Otra pregunta que te haces ahora que estás investigando un poco sobre el rechazo de los implantes dentales puede ser:</p>
                                 <p>
-                                    <b>"Vale "Ya sé que la probabilidad de rechazo de un implante dental es bastante baja, pero... ¿y si me pasara a mí? ¿Y si mi implante haya fracasado? ¿Cómo puedo detectarlo?"</b>
+                                    <b style="color: red;">"Vale "Ya sé que la probabilidad de rechazo de un implante dental es bastante baja, pero... ¿y si me pasara a mí? ¿Y si mi implante haya fracasado? ¿Cómo puedo detectarlo?"</b>
                                 </p>
                                 <p>En general, los síntomas de rechazo de un implante dental que puedes experimentar como paciente son los siguientes</p>
                                 <p>
-                                    <b>Síntoma de rechazo de un implante dental 1: Movilidad</b><br>Una señal de que algo no va como debería es cuando sientes que tu implante se mueve notablemente durante el periodo de cicatrización.
+                                    <b style="color: red;">Síntoma de rechazo de un implante dental 1: Movilidad</b><br>Una señal de que algo no va como debería es cuando sientes que tu implante se mueve notablemente durante el periodo de cicatrización.
                                 </p>
                                 <p>
-                                    <b>Síntoma de rechazo de un implante dental 2: Malestar y dolor</b><br>Otro síntoma de rechazo de un implante dental es la incomodidad y el dolor al aplicar presión sobre el implante después del periodo postoperatorio (de 24 a 48 horas).
+                                    <b style="color: red;">Síntoma de rechazo de un implante dental 2: Malestar y dolor</b><br>Otro síntoma de rechazo de un implante dental es la incomodidad y el dolor al aplicar presión sobre el implante después del periodo postoperatorio (de 24 a 48 horas).
                                 </p>
                                 <p>
-                                    <b>Síntoma de rechazo del implante dental 3: Infección alrededor de la zona</b><br>Anteriormente, te contamos que una de las causas de rechazo de los implantes dentales es la infección tras la cirugía.<br>Así, si se produce una infección en la zona operada, las molestias aumentarán al cabo de unos días y la zona operada estará ligeramente inflamada, aumentada de tamaño y con un aspecto rojizo.</p>
+                                    <b style="color: red;">Síntoma de rechazo del implante dental 3: Infección alrededor de la zona</b><br>Anteriormente, te contamos que una de las causas de rechazo de los implantes dentales es la infección tras la cirugía.<br>Así, si se produce una infección en la zona operada, las molestias aumentarán al cabo de unos días y la zona operada estará ligeramente inflamada, aumentada de tamaño y con un aspecto rojizo.</p>
                                 <p>
-                                    <b>Si notas alguno de estos signos tras la colocación de los implantes, debes ponerte en contacto con tu dentista lo antes posible para determinar si estás sufriendo o no un rechazo de tu implante dental.</b>
+                                    <b style="color: red;">Si notas alguno de estos signos tras la colocación de los implantes, debes ponerte en contacto con tu dentista lo antes posible para determinar si estás sufriendo o no un rechazo de tu implante dental.</b>
                                 </p>
                                 <picture>
                                     <source srcset="images/pics/Pic4.jpeg" type="image/jpg">
@@ -276,7 +381,7 @@ a:visited,
                                 </picture>
                                 <p>Ya ha podido comprobar que el rechazo de los implantes dentales, o más concretamente, la falla de los implantes dentales, no es un hecho infrecuente, incluso con la avanzada tecnología actual.</p>
                                 <p>
-                                    <b>El miedo a los implantes dentales puede llevar a algunos pacientes a plantearse otras soluciones, y afortunadamente las hay, como las carillas removibles.</b>
+                                    <b style="color: red;">El miedo a los implantes dentales puede llevar a algunos pacientes a plantearse otras soluciones, y afortunadamente las hay, como las carillas removibles.</b>
                                 </p>
                                 <picture>
                                     <source srcset="images/pics/Pic5.jpeg" type="image/jpg">
@@ -299,7 +404,7 @@ a:visited,
                                     <li>Asequibilidad, en relación con el coste de soluciones alternativas.</li>
                                 </ul>
                                 <p>
-                                    <b>En el lado negativo, hay un gran número de falsificaciones en el mercado, ya sea como homólogos o bajo el nombre original.</b>
+                                    <b style="color: red;">En el lado negativo, hay un gran número de falsificaciones en el mercado, ya sea como homólogos o bajo el nombre original.</b>
                                 </p>
                                 <p>Nos pusimos en contacto con un fabricante autorizado de carillas removibles y le hicimos esta pregunta: ¿por qué no están en el mercado? La respuesta fue que, seis meses después de su introducción en el mercado dental, la proporción de productos falsificados era ya de alrededor del 43%. Por ello, el fabricante decidió vender el producto únicamente a través de su sitio web oficial.</p>
                                 <p>En vista de esta situación, para facilitar su búsqueda, hemos convencido al fabricante para que coloque un formulario de pedido al final de nuestro artículo.</p>
